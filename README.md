@@ -1,3 +1,26 @@
+**!!begin aura!!**
+
+# Sparse Checkout
+```bash
+mkdir deeplab
+cd deeplab
+git init
+git remote add origin -f https://github.com/aura-reality/deeplab.git
+echo "research/deeplab" >> .git/info/sparse-checkout
+git config core.sparseCheckout true
+```
+
+# Merge Changes From Remote
+```bash
+git remote add public https://github.com/tensorflow/models.git
+git pull public master # Creates a merge commit
+git push origin master
+```
+
+~ [Stack Overflow](https://stackoverflow.com/questions/10065526/github-how-to-make-a-fork-of-public-repository-private)
+
+**!!end aura!!**
+
 # TensorFlow Models
 
 This repository contains a number of different models implemented in [TensorFlow](https://www.tensorflow.org):
