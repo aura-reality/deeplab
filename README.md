@@ -1,6 +1,8 @@
 **!!begin aura!!**
 
 # Sparse Checkout
+This is a HUGE repo, just check out the deeplab part!
+
 ```bash
 mkdir deeplab
 cd deeplab
