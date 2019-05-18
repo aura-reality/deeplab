@@ -96,10 +96,30 @@ _ADE20K_INFORMATION = DatasetDescriptor(
     ignore_label=0,
 )
 
+_ALPHA_MATTING_INFORMATION = DatasetDescriptor(
+    splits_to_sizes={
+        'train': 24,
+        'val': 3,
+    },
+    num_classes=2,
+    ignore_label=255,
+)
+
+_CARVANA_INFORMATION = DatasetDescriptor(
+    splits_to_sizes={
+        'train': 2975,
+        'val': 500,
+    },
+    num_classes=2,
+    ignore_label=255,
+)
+
 _DATASETS_INFORMATION = {
     'cityscapes': _CITYSCAPES_INFORMATION,
     'pascal_voc_seg': _PASCAL_VOC_SEG_INFORMATION,
     'ade20k': _ADE20K_INFORMATION,
+    'carvana': _CARVANA_INFORMATION,
+    'alpha_matting': _ALPHA_MATTING_INFORMATION,
 }
 
 # Default file pattern of TFRecord of TensorFlow Example.
