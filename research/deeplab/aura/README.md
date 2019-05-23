@@ -1,6 +1,6 @@
 # How to train to mask
 
-#### -2. Set the dataset name and location of the github dir
+#### -1. Set the dataset name and location of the github dir
 ```bash
 # Set these two variables
 DATASET_NAME=alpha_matting
