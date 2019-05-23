@@ -73,3 +73,4 @@ TODO
 
 ## TODO
 * Crop around the intermediate region
+* Assume users would give "object in circle"
