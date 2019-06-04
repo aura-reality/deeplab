@@ -46,17 +46,17 @@ python $SCRIPTS/composite.py --fg $FG --bg $BG --mask $MASK -n 1 -o $COMPOSITE
 #### 3. Create the training and validation file-name lists
 ```bash
 cd $DEEPLAB_HOME/research/deeplab/datasets
-python create_list_files.py --name $DATASET_NAME $COMPOSITED $LISTS
+python create_list_files.py --name $DATASET_NAME $COMPOSITE $LISTS
 ```
 
-*(To skip compositing, just put your files at `$COMPOSITED`, e.g. `mv $FG $COMPOSITED`)*
+*(To skip compositing, just put your files at `$COMPOSITE`, e.g. `mv $FG $COMPOSITE`)*
 
 #### 4. Convert files to TF Records
 ```
 cd $DEEPLAB_HOME/research/deeplab/datasets
 mkdir -p $TFRECORD
 python build_voc2012_data.py \
-  --image_folder=$COMPOSITED \
+  --image_folder=$COMPOSITE \
   --semantic_segmentation_folder=$SEGMENTATION \
   --list_folder=$LISTS \
   --image_format=png \
@@ -65,7 +65,7 @@ python build_voc2012_data.py \
 
 *Check on the results:*
 ```
-open $COMPOSITED
+open $COMPOSITE
 ```
 
 #### 4. Run training
